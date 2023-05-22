@@ -166,7 +166,11 @@
             /* display: inline-block; */
         }
 
-        .title:nth-of-type(1) {
+        .title:nth-of-type(odd) {
+            animation: wobble 2s ease-in-out infinite alternate-reverse;
+        }
+
+        /* .title:nth-of-type(1) {
             animation-delay: 0;
         }
 
@@ -232,7 +236,7 @@
 
         .title:nth-of-type(17) {
             animation-delay: 0.25s;
-        }
+        } */
 
         header {
             display: flex;
