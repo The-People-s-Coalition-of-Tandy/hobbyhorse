@@ -145,15 +145,19 @@
         @media only screen and (max-width: 1000px) {
             .banner {
                 font-size: 32pt;
-                margin-top: -30%;
             }
+
             .banner .p-fix {
-            font-size: 38pt;
-            line-height: 30px;
-            letter-spacing: -4px;
-            -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: black;
-        }
+                font-size: 38pt;
+                line-height: 30px;
+                letter-spacing: -4px;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: black;
+            }
+
+            header {
+                margin-top: 0;
+            }
 
             .desktop-only {
                 display: none;
@@ -163,18 +167,17 @@
                 display: flex;
             }
 
-            .horse:first-of-type {
-                margin-bottom: -15vh;
-                margin-top: 20px
-            }
-
             .horse {
                 height: 15vh;
                 width: auto;
             }
 
             .book.book {
-                animation: mobile-book 3s ease-in-out infinite alternate;
+                animation: mobile-book 2s ease-in-out infinite alternate;
+            }
+
+            #tandyWebring {
+                position: relative;
             }
         }
 
@@ -192,7 +195,7 @@
         header {
             display: flex;
             justify-content: center;
-            margin-top: 10%;
+            margin-top: -10%;
             margin-bottom: 50px;
             flex-shrink: 0;
             width: 100%;
