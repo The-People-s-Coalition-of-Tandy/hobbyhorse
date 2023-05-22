@@ -129,6 +129,11 @@
             display: none;
         }
 
+        #tandyWebring {
+            position: absolute;
+            bottom: 20px;
+        }
+
         @media only screen and (max-width: 1000px) {
             .banner {
                 font-size: 32pt;
@@ -147,6 +152,7 @@
                 margin-bottom: -15vh;
                 margin-top: 20px
             }
+
             .horse {
                 height: 15vh;
                 width: auto;
@@ -237,7 +243,7 @@
             width: 100%;
         }
 
-        a {
+        .submit {
             font-size: 50pt;
             color: #cec21f;
             -webkit-text-stroke-width: 1px;
@@ -299,14 +305,14 @@
             </div>
             <img class="horse desktop-only" src="./horse.png">
         </header>
-        <p><a href="mailto:someone@example.com">Submit</a></p>
+        <p><a class="submit" href="mailto:someone@example.com">Submit</a></p>
         <div class="flexbox mobile-only">
             <img class="horse" src="./horse.png">
         </div>
         <div id="tandyWebring">
             <script type="text/javascript" src="https://webring.pcotandy.org/variables.js"></script>
             <script type="text/javascript" src="https://webring.pcotandy.org/webring.js"></script>
-            </div>
+        </div>
     </main>
 </body>
 
