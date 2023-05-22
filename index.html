@@ -10,7 +10,7 @@
     <style>
         @font-face {
             font-family: hobbyhorse;
-            src: url(./Hobby-Regular.ttf);
+            src: url(./BeHorsy-Regular.otf);
         }
 
         @font-face {
@@ -39,48 +39,31 @@
             /* filter: blur(10px); */
         }
 
-        .peppers.too {
-            /* background-image: url(./paper.jpg); */
-            /* opacity: .5; */
+        .flexbox {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         @keyframes swing {
-
-            0%,
-            100% {
-                transform: rotate(-20deg);
+            from {
+                transform: rotateY(0deg);
             }
 
-            20% {
-                transform: scale(.95);
-            }
-
-            50% {
-                transform: rotate(20deg);
-            }
-
-            80% {
-                transform: scale(.95);
+            to {
+                transform: rotateY(359.9deg);
             }
         }
 
         @keyframes swing-flip {
 
-            0%,
-            100% {
-                transform: rotate(-20deg) scaleX(-1);
+            from {
+                transform: rotateY(0deg);
             }
 
-            20% {
-                transform: scale(.95) scaleX(-1);
-            }
-
-            50% {
-                transform: rotate(20deg) scaleX(-1);
-            }
-
-            80% {
-                transform: scale(.95) scaleX(-1);
+            to {
+                transform: rotateY(359.9deg);
             }
         }
 
@@ -105,36 +88,26 @@
             flex-direction: column;
             z-index: 1;
             position: relative;
-            /* margin-top: -100px; */
         }
 
         .horse.mirror {
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
-            animation: swing-flip 4s linear infinite;
-            /* animation-delay: 1s; */
+            animation: swing-flip 4.5s linear infinite;
         }
 
         .horse {
-            animation: swing 4s linear infinite;
+            animation: swing 6s linear infinite;
             width: 10%;
         }
 
         @keyframes wobble {
             0% {
                 transform: rotate(-10deg) scale(1);
-
-                /* font-size: 2pt; */
-            }
-
-            50% {
-                transform: scale(1.1);
             }
 
             100% {
-
                 transform: rotate(10deg);
-                /* font-size: 32pt; */
             }
         }
 
@@ -142,14 +115,49 @@
         .banner {
             width: fit-content;
             font-family: hobbyhorse;
-            font-size: 32pt;
+            font-size: 64pt;
             text-align: center;
             position: relative;
         }
 
+        .word {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .banner {
+                font-size: 32pt;
+                margin-top: -30%;
+            }
+
+            .desktop-only {
+                display: none;
+            }
+
+            .mobile-only {
+                display: flex;
+            }
+
+            .horse:first-of-type {
+                margin-bottom: -15vh;
+                margin-top: 20px
+            }
+            .horse {
+                height: 15vh;
+                width: auto;
+            }
+        }
+
+
+
         .title {
-            animation: wobble 2s ease infinite alternate;
-            display: inline-block;
+            animation: wobble 2s ease-in-out infinite alternate;
+            /* display: inline-block; */
         }
 
         .title:nth-of-type(1) {
@@ -223,7 +231,8 @@
         header {
             display: flex;
             justify-content: center;
-            margin-top: -25%;
+            margin-top: calc(-25% + 50px);
+            margin-bottom: 50px;
             flex-shrink: 0;
             width: 100%;
         }
@@ -238,6 +247,9 @@
             text-decoration-thickness: 3px;
             letter-spacing: 4px;
             text-decoration-color: #ae7246;
+            text-underline-offset: 4px;
+            text-decoration-skip-ink: none;
+            padding-top: 200px;
         }
     </style>
 </head>
@@ -246,63 +258,51 @@
     <div class="peppers too">
     </div>
     <div class="peppers">
-        <!-- <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%">
-        <img src="./pepper.png" width="10%"> -->
-
-
-
     </div>
-    <!-- <header>
-        <img src="./horse.png" width="100px">
-        <img src="./press.png" width="100px">
-    </header> -->
+    <div class="flexbox mobile-only">
+        <img class="horse" src="./horse.png">
+    </div>
+
     <main>
+
         <header>
-            <img class="horse mirror" src="./horse.png">
+            <img class="horse mirror desktop-only" src="./horse.png">
             <div class="banner">
-                <div>
-                    <span class="title">H</span>
-                    <span class="title">O</span>
-                    <span class="title">B</span>
-                    <span class="title">b</span>
-                    <span class="title">Y</span>
-                    <span class="title">&nbsp;</span>
-                    
-                    <span class="title">h</span>
-                    <span class="title">o</span>
-                    <span class="title">R</span>
-                    <span class="title">S</span>
-                    <span class="title">E</span>
+                <div class="flexbox">
+                    <div class="word">
+
+                        <span class="title">H</span>
+                        <span class="title">O</span>
+                        <span class="title">B</span>
+                        <span class="title">b</span>
+                        <span class="title">Y</span>
+                        <span class="title">&nbsp;</span>
+                    </div>
+
+                    <div class="word">
+                        <span class="title">h</span>
+                        <span class="title">o</span>
+                        <span class="title">R</span>
+                        <span class="title">S</span>
+                        <span class="title">E</span>
+                    </div>
                 </div>
 
-                <div style="margin-top: 20px;">
+                <div class="word" style="margin-top: 20px;">
                     <span class="title">&nbsp;</span>
-                    <span class="title">P</span>
+                    <span class="title">p</span>
                     <span class="title">r</span>
                     <span class="title">e</span>
                     <span class="title">s</span>
-                    <span class="title">s</span>
+                    <span class="title">$</span>
                 </div>
             </div>
-            <img class="horse" src="./horse.png">
+            <img class="horse desktop-only" src="./horse.png">
         </header>
         <p><a href="mailto:someone@example.com">Submit</a></p>
+        <div class="flexbox mobile-only">
+            <img class="horse" src="./horse.png">
+        </div>
     </main>
 </body>
 
