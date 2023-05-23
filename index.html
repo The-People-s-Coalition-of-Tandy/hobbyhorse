@@ -50,22 +50,22 @@
 
         @keyframes swing {
             from {
-                transform: rotateY(0deg);
+                transform: rotateY(0deg) rotateZ(0);
             }
 
             to {
-                transform: rotateY(359.9deg);
+                transform: rotateY(359.9deg) rotateZ(0);
             }
         }
 
         @keyframes swing-flip {
 
             from {
-                transform: rotateY(0deg);
+                transform: rotateY(0deg) rotateZ(0);
             }
 
             to {
-                transform: rotateY(359.9deg);
+                transform: rotateY(359.9deg) rotateZ(0);
             }
         }
 
@@ -73,10 +73,12 @@
         @-webkit-keyframes scrolling-background {
             from {
                 background-position: 0 0;
+                transform: rotateZ(0);
             }
 
             to {
                 background-position: -1920px 0;
+                transform: rotateZ(0);
             }
         }
 
@@ -105,11 +107,11 @@
 
         @keyframes wobble {
             0% {
-                transform: rotate(-10deg) scale(1);
+                transform: rotate(-10deg) scale(1) rotateZ(0);;
             }
 
             100% {
-                transform: rotate(10deg);
+                transform: rotate(10deg) rotateZ(0);;
             }
         }
 
@@ -220,11 +222,11 @@
 
         @keyframes mobile-book {
             from {
-                transform: rotateY(-20deg);
+                transform: rotateY(-20deg) translateZ(0);;
             }
 
             to {
-                transform: rotateY(0deg);
+                transform: rotateY(0deg) translateZ(0);;
             }
 
         }
