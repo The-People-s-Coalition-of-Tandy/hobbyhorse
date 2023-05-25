@@ -14,7 +14,7 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    background-image: url(./peppers.png);
+    background-image: url(./peppers_opacity.png);
     animation: scrolling-background 30s linear infinite;
 }
 
@@ -193,15 +193,18 @@ header {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 @media only screen and (min-width: 1000px) {
     .mobile-only {
         display: none;
+    }
+
+    footer {
+        margin-top: 8%;
     }
 }
 
