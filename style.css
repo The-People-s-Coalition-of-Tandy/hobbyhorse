@@ -196,6 +196,7 @@ footer {
     display: flex;
     justify-content: center;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -225,10 +226,23 @@ footer {
 
     .horse {
         width: 30%;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     main {
         margin-bottom: 40px;
+    }
+
+    .book.book {
+        animation: mobile-book 2s ease-in-out infinite alternate;
+    }
+    @keyframes mobile-book {
+        from {
+            transform: rotateY(-20deg) translateZ(0);;
+        }
+
+        to {
+            transform: rotateY(0deg) translateZ(0);;
+        }
     }
 }
